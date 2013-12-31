@@ -2,6 +2,7 @@ TrainQuery
 ==========
 
 Query from 12306,which is a simple demo to deal with json.
+<<<<<<< HEAD
 
 ===
 Update 2013-12-25 
@@ -11,3 +12,5 @@ Update 2013-12-25
 1.下个版本增加余票的价格;
 
 ===
+=======
+>>>>>>> bcd629f86eb775c4425deeca9216cb77ca5067d5
