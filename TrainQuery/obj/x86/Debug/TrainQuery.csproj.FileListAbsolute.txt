@@ -1,0 +1,17 @@
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\bin\Debug\TrainQuery.exe.config
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\bin\Debug\TrainQuery.exe
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\bin\Debug\TrainQuery.pdb
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\obj\x86\Debug\_TrainQuery_.Form1.resources
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\obj\x86\Debug\_TrainQuery_.Properties.Resources.resources
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\obj\x86\Debug\TrainQuery.csproj.GenerateResource.Cache
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\obj\x86\Debug\TrainQuery.exe
+D:\testC#\dll\TrainQuery\20131211余票查询(基于新版)\obj\x86\Debug\TrainQuery.pdb
+D:\testC#\dll\TrainQuery\TrainQuery\bin\Debug\WindowsApplication.exe.config
+D:\testC#\dll\TrainQuery\TrainQuery\bin\Debug\WindowsApplication.exe
+D:\testC#\dll\TrainQuery\TrainQuery\bin\Debug\WindowsApplication.pdb
+D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.csprojResolveAssemblyReference.cache
+D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\_TrainQuery_.Form1.resources
+D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.Properties.Resources.resources
+D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.csproj.GenerateResource.Cache
+D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\WindowsApplication.exe
+D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\WindowsApplication.pdb
