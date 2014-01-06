@@ -15,3 +15,12 @@ D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.Properties.Resource
 D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.csproj.GenerateResource.Cache
 D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\WindowsApplication.exe
 D:\testC#\dll\TrainQuery\TrainQuery\obj\x86\Debug\WindowsApplication.pdb
+D:\testC#\dll\git\TrainQuery\TrainQuery\bin\Debug\WindowsApplication.exe.config
+D:\testC#\dll\git\TrainQuery\TrainQuery\obj\x86\Debug\WindowsApplication.exe
+D:\testC#\dll\git\TrainQuery\TrainQuery\obj\x86\Debug\WindowsApplication.pdb
+D:\testC#\dll\git\TrainQuery\TrainQuery\bin\Debug\WindowsApplication.exe
+D:\testC#\dll\git\TrainQuery\TrainQuery\bin\Debug\WindowsApplication.pdb
+D:\testC#\dll\git\TrainQuery\TrainQuery\obj\x86\Debug\_TrainQuery_.Form1.resources
+D:\testC#\dll\git\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.Properties.Resources.resources
+D:\testC#\dll\git\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.csproj.GenerateResource.Cache
+D:\testC#\dll\git\TrainQuery\TrainQuery\obj\x86\Debug\TrainQuery.uc.ticketleft.resources

@@ -3,6 +3,12 @@ TrainQuery
 
 Query from 12306,which is a simple demo to deal with json.
 <<<<<<< HEAD
+===
+Update 2014-01-06
+修改:
+1.修改的天数范围，26天可查，因为新增的D和L允许购买25天的票;
+2.票价查询做了一点，就懒得写了，等啥时候无聊了加上吧。
+
 
 ===
 

@@ -68,12 +68,12 @@
             this.lbStatusCon = new System.Windows.Forms.Label();
             this.lbListCount = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lbPrice = new System.Windows.Forms.Label();
             this.票价ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.gbTrainNo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.contextMenuStrip2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDesFrom
@@ -423,15 +423,19 @@
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.票价ToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(101, 26);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Location = new System.Drawing.Point(20, 516);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(41, 12);
+            this.lbPrice.TabIndex = 11;
+            this.lbPrice.Text = "label4";
             // 
             // 票价ToolStripMenuItem
             // 
@@ -443,7 +447,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 521);
+            this.ClientSize = new System.Drawing.Size(769, 537);
+            this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.lbListCount);
             this.Controls.Add(this.lbStatusCon);
             this.Controls.Add(this.lbStatusDic);
@@ -463,7 +468,7 @@
             this.gbTrainNo.ResumeLayout(false);
             this.gbTrainNo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuStrip2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,7 +514,7 @@
         private System.Windows.Forms.Label lbStatusCon;
         private System.Windows.Forms.Label lbListCount;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.ToolStripMenuItem 票价ToolStripMenuItem;
     }
 }

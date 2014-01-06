@@ -27,7 +27,7 @@ namespace _TrainQuery_
         /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
-            dtp.MaxDate = DateTime.Now.AddDays(21);
+            dtp.MaxDate = DateTime.Now.AddDays(26);
             dtp.MinDate = DateTime.Now;
             Thread t1=new Thread(()=>{DicLoad();});
             t1.IsBackground=true;
@@ -46,6 +46,7 @@ namespace _TrainQuery_
             t3.Start();
         }
 
+        //执行查询
         private void Execute()
         {
             if (dic.Count < 1000)
@@ -2431,6 +2432,7 @@ namespace _TrainQuery_
         }
         #endregion
 
+        //一个车票类
         public Tickets JsonTicket(string jsonPart)
         { 
             //将一个火车的json
@@ -2442,9 +2444,9 @@ namespace _TrainQuery_
             //gg_num:--,gr_num:5,qt_num:--,rw_num:无,rz_num:--,tz_num:--,wz_num:无,yb_num:--,yw_num:无,yz_num:无,ze_num:--,zy_num:--,swz_num:--
             Tickets tk = new Tickets();
             string[] lev1= JsonCut(jsonPart, ",");
-            tk.train_no = JsonCut(lev1[0], ":")[1];
+            tk.train_no = JsonCut(lev1[0], ":")[1];//查询票价，预定   时候用到
             tk.station_train_code = JsonCut(lev1[1], ":")[1];
-            tk.start_station_telecode = JsonCut(lev1[2], ":")[1];
+            tk.start_station_telecode = JsonCut(lev1[2], ":")[1];//查询票价  时候用到
             tk.start_station_name= JsonCut(lev1[3], ":")[1];
             tk.end_station_telecode= JsonCut(lev1[4], ":")[1];
             tk.end_station_name=JsonCut(lev1[5], ":")[1];
@@ -2513,6 +2515,9 @@ namespace _TrainQuery_
             }
         }
         #endregion
+
+        //查询票价
+        //private 
 
     }
 }

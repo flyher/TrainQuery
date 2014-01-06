@@ -57,6 +57,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prices.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs" />
@@ -67,12 +68,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Tickets.cs" />
+    <Compile Include="uc\ticketleft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ticketleft.Designer.cs">
+      <DependentUpon>ticketleft.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="uc\ticketleft.resx">
+      <DependentUpon>ticketleft.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
