@@ -4,6 +4,11 @@ TrainQuery
 Query from 12306,which is a simple demo to deal with json.
 <<<<<<< HEAD
 ===
+Update 2014-01-08
+修改:
+1.购票高峰期查询余票得到无返回数据或者异常数据的处理,这次bug直接导致程序崩溃,已更正.
+
+===
 Update 2014-01-06
 修改:
 1.修改的天数范围，26天可查，因为新增的D和L允许购买25天的票;
