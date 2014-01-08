@@ -71,60 +71,72 @@ namespace _TrainQuery_
             string json = GetResponseHtml(url, "get", "", "application/x-www-form-urlencoded", "utf-8");
             //处理返回的json
             string[] strTickets = JsonHelp(json);//每行一组票况
-            List<Tickets> lst_tickets = new List<Tickets>();
-            for (int i = 0; i < strTickets.Length; i++)
+            if (strTickets==null)//2014-1-8购票高峰期间服务器崩溃会返回错误字段,此处处理
             {
-                Tickets tk = new Tickets();
-                tk = JsonTicket(strTickets[i]);
-                lst_tickets.Add(tk);
+                Invoke(new Action(() => {
+                    btnSearch.Enabled = true;
+                }));
+
+                return;
             }
-            Invoke(new Action(() =>
+            else
             {
-                lst_ticketsPart = lst_tickets;
-                dataGridView1.DataSource = lst_tickets;
-                //dataGridView1.
-                //隐藏列
-                dataGridView1.Columns["train_no"].Visible = false;
-                dataGridView1.Columns["start_station_telecode"].Visible = false;
-                dataGridView1.Columns["end_station_telecode"].Visible = false;
-                dataGridView1.Columns["from_station_telecode"].Visible = false;
-                dataGridView1.Columns["start_station_name"].Visible = false;
-                dataGridView1.Columns["end_station_name"].Visible = false;
-                dataGridView1.Columns["train_no"].Visible = false;
-                dataGridView1.Columns["to_station_telecode"].Visible = false;
+                List<Tickets> lst_tickets = new List<Tickets>();
+                for (int i = 0; i < strTickets.Length; i++)
+                {
+                    Tickets tk = new Tickets();
+                    tk = JsonTicket(strTickets[i]);
+                    lst_tickets.Add(tk);
+                }
+                Invoke(new Action(() =>
+                {
+                    lst_ticketsPart = lst_tickets;
+                    dataGridView1.DataSource = lst_tickets;
+                    //dataGridView1.
+                    //隐藏列
+                    dataGridView1.Columns["train_no"].Visible = false;
+                    dataGridView1.Columns["start_station_telecode"].Visible = false;
+                    dataGridView1.Columns["end_station_telecode"].Visible = false;
+                    dataGridView1.Columns["from_station_telecode"].Visible = false;
+                    dataGridView1.Columns["start_station_name"].Visible = false;
+                    dataGridView1.Columns["end_station_name"].Visible = false;
+                    dataGridView1.Columns["train_no"].Visible = false;
+                    dataGridView1.Columns["to_station_telecode"].Visible = false;
 
-                dataGridView1.Columns["day_difference"].Visible = false;
-                dataGridView1.Columns["train_class_name"].Visible = false;
-                dataGridView1.Columns["canWebBuy"].Visible = false;
-                dataGridView1.Columns["lishiValue"].Visible = false;
-                dataGridView1.Columns["yp_info"].Visible = false;
-                dataGridView1.Columns["control_train_day"].Visible = false;
-                dataGridView1.Columns["start_train_date"].Visible = false;
-                dataGridView1.Columns["seat_feature"].Visible = false;
+                    dataGridView1.Columns["day_difference"].Visible = false;
+                    dataGridView1.Columns["train_class_name"].Visible = false;
+                    dataGridView1.Columns["canWebBuy"].Visible = false;
+                    dataGridView1.Columns["lishiValue"].Visible = false;
+                    dataGridView1.Columns["yp_info"].Visible = false;
+                    dataGridView1.Columns["control_train_day"].Visible = false;
+                    dataGridView1.Columns["start_train_date"].Visible = false;
+                    dataGridView1.Columns["seat_feature"].Visible = false;
 
-                dataGridView1.Columns["yp_ex"].Visible = false;
-                dataGridView1.Columns["train_seat_feature"].Visible = false;
-                dataGridView1.Columns["seat_types"].Visible = false;
-                dataGridView1.Columns["location_code"].Visible = false;
-                dataGridView1.Columns["from_station_no"].Visible = false;
-                dataGridView1.Columns["to_station_no"].Visible = false;
-                dataGridView1.Columns["start_train_date"].Visible = false;
-                dataGridView1.Columns["control_day"].Visible = false;
+                    dataGridView1.Columns["yp_ex"].Visible = false;
+                    dataGridView1.Columns["train_seat_feature"].Visible = false;
+                    dataGridView1.Columns["seat_types"].Visible = false;
+                    dataGridView1.Columns["location_code"].Visible = false;
+                    dataGridView1.Columns["from_station_no"].Visible = false;
+                    dataGridView1.Columns["to_station_no"].Visible = false;
+                    dataGridView1.Columns["start_train_date"].Visible = false;
+                    dataGridView1.Columns["control_day"].Visible = false;
 
-                dataGridView1.Columns["sale_time"].Visible = false;
-                dataGridView1.Columns["is_support_card"].Visible = false;
-                dataGridView1.Columns["note"].Visible = false;
-                dataGridView1.Columns["gg_num"].Visible = false;
-                //dataGridView1.Columns["location_code"].Visible = false;
-                //dataGridView1.Columns["from_station_no"].Visible = false;
-                //dataGridView1.Columns["to_station_no"].Visible = false;
-                //dataGridView1.Columns["start_train_date"].Visible = false;
-                //dataGridView1.Columns["control_day"].Visible = false;    
+                    dataGridView1.Columns["sale_time"].Visible = false;
+                    dataGridView1.Columns["is_support_card"].Visible = false;
+                    dataGridView1.Columns["note"].Visible = false;
+                    dataGridView1.Columns["gg_num"].Visible = false;
+                    //dataGridView1.Columns["location_code"].Visible = false;
+                    //dataGridView1.Columns["from_station_no"].Visible = false;
+                    //dataGridView1.Columns["to_station_no"].Visible = false;
+                    //dataGridView1.Columns["start_train_date"].Visible = false;
+                    //dataGridView1.Columns["control_day"].Visible = false;    
 
-                lbListCount.Text = dataGridView1.Rows.Count.ToString() + " 辆";
-                btnSearch.Enabled = true;
-            }));
+                    lbListCount.Text = dataGridView1.Rows.Count.ToString() + " 辆";
+                    btnSearch.Enabled = true;
+                }));
+            }
         }
+           
 
         private void CbChange(object sender, EventArgs e)
         {
@@ -2412,6 +2424,13 @@ namespace _TrainQuery_
         { 
             json=json.Replace("{\"validateMessagesShowId\":\"_validatorMessage\",\"status\":true,\"httpstatus\":200,\"data\":{\"datas\":[","")
                 .Replace("},{","#");
+            if (json.Length<=0)
+            {
+                Invoke(new Action(() => {
+                    lbStatus.Text = "* 服务器返回错误字段";
+                }));
+                return null;
+            }
             //提取不需要的，
             Regex r = new Regex("}],\"flag\".+");
             json = json.Replace(r.Match(json).Value, "");//将后面的一段字符串去掉
